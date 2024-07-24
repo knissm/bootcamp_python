@@ -12,7 +12,12 @@ numero = int(input("Digite um numero: "))
 resto_divisao = numero % 5
 print(f"Resto da divisão por 5: {resto_divisao}")
 """
+
 #Desenvolva um programa que multiplique dois números fornecidos pelo usuário e mostre o resultado.
+num1 = int(input("Digite o primeiro numero: "))
+num2 = int(input("Agora o segundo: "))
+
+print(f" Resultado: {num1*num2}")
 #Faça um programa que peça dois números inteiros e imprima a divisão inteira do primeiro pelo segundo.
 #Escreva um programa que calcule o quadrado de um número fornecido pelo usuário.
 
