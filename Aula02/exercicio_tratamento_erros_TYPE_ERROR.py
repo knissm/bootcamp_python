@@ -37,3 +37,41 @@ try:
 except ValueError:
     print("Por favor, insira uma entrada válida")
 """
+
+#Crie um programa que verifica se uma palavra ou frase é um palíndromo 
+# (lê-se igualmente de trás para frente, desconsiderando espaços e pontuações). 
+# Utilize try-except para garantir que a entrada seja uma string. 
+# Dica: Utilize a função isinstance() para verificar o tipo da entrada.
+"""
+try:
+    entrada = input("Digite uma palavra ou frase: ").lower()
+    if isinstance(entrada, str):
+        formatado = entrada.replace(" ", "")
+        if formatado == formatado[::-1]:
+            print(f"A palavra {entrada} é um palíndromo.")
+        else:
+            print(f"A palavra {entrada} não é um palíndromo!")
+    else:
+        print("Entrada inválida. Digite uma palavra ou frase!")
+except KeyboardInterrupt:
+    print("Interrompido pelo usuário!")
+"""
+#Crie um script que solicite ao usuário uma lista de números separados por vírgula. 
+# O programa deve converter a string de entrada em uma lista de números inteiros. 
+# Utilize try-except para tratar a conversão de cada número e validar que cada elemento da lista convertida é um inteiro. 
+# Se a conversão falhar ou um elemento não for um inteiro, imprima uma mensagem de erro. 
+# Se a conversão for bem-sucedida para todos os elementos, imprima a lista de inteiros.
+try:
+    entrada_lista = input("Digite uma lista de números separada por vírgula: ")
+    numeros_str = entrada_lista.split(",")
+    numeros_int = []
+
+    for num in numeros_str:
+        numeros_int.append(int(num.strip()))
+    print(f"Lista dos numeros inteiros: {numeros_int}")
+    
+except ValueError:
+    print("Verifique a entrada. Somente números inteiros são permitidos")
+except KeyboardInterrupt:
+    print("Capturado um KeyboardInterrupt. Operação interrompida pelo usuário.")
+
