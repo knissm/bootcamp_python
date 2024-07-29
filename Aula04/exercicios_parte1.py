@@ -46,15 +46,23 @@ dicionario = {
 """
 #Crie um dicionario para armazenar informações de um livro,
 #incluindo titulo, autor e ano de publicação. Imprima cada informação.
-
+"""
 from typing import Dict, Any
-livro: dict[str, Any] = {
+
+livro1: dict[str, Any] = {
     "Titulo":"Game of Thrones",
     "Autor":"N/A",
     "Ano":2005
 }
 
-lista_elementos:list = livro.items()
+livro2: dict[str, Any] = {
+    "Titulo":"Game of Thrones2",
+    "Autor":"N/A",
+    "Ano":2005
+}
+
+lista_elementos:list = livro1.items()
 
 for elemento in lista_elementos:
     print(elemento)
+"""
