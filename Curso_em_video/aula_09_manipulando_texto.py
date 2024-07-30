@@ -23,10 +23,21 @@ tem_palavra = 'Curso' in frase
 print(tem_palavra)
 
 """Transformação de uma string"""
-print(frase.replace("Python", "Andoid")) #Vai procurar a palavra Python e substituir por Android
-print(frase.upper()) # Deixa o texto em maiúscula
-print(frase.lower()) #Deixa tudo minúsculo
-print(frase.capitalize()) #Somente o primeiro caractere em maiúsculo
-print(frase.title())
+frase.replace("Python", "Andoid") #Vai procurar a palavra Python e substituir por Android
+frase.upper() # Deixa o texto em maiúscula
+frase.lower() #Deixa tudo minúsculo
+frase.capitalize() #Somente o primeiro caractere em maiúsculo
+frase.title() #Deixa as palavras de maiúsculas 
+frase.strip() #remove espaços do inicio e do final da string
+frase.rsplit() #remove os espaços à direita
+frase.lsplit() #remove os espaços à esquerda
+
+"""Divisão de Strings"""
+frase.split() #Por padrão o split é feito nos espaços
+
+"""Junção de Strings"""
+'-'.join(frase) #Junta as stringss
+
+
 
 

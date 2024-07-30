@@ -27,6 +27,7 @@ dezenas: 3
 centenas: 8
 milhar:1
 """
+
 #Desagio 24:
 """Crie um programa que leia o nome de uma cidade e diga se ela começa ou não com o nome SANTO"""
 """
@@ -42,8 +43,10 @@ else:
 
 #Desafio 25:
 """Crie um programa que peça o nome de uma pessoa e diga se ela tem silva no nome"""
+
 """
 RESOLUÇÃO
+
 nome = input("Digite seu nome completo: ").lower()
 
 if "silva" in nome:
@@ -72,7 +75,10 @@ print(f"A ultima posição da letra 'A' é no índice n° {frase.rfind('a')}")
 Ex: Marcelo Augusto Kniss
 primeiro: Marcelo
 ultimo: Kniss"""
+"""
+RESOLUÇÃO
 nome_completo = input("Digite seu nome completo: ").title()
 lista = nome_completo.split(" ")
 print(f"Primeiro nome: {lista[0]}")
 print(f"Último nome: {lista[-1]}")
+"""
