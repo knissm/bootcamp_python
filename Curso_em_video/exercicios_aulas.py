@@ -105,6 +105,7 @@ print("Olá")
 """ Escreva um programa que leia a velocidade de um carro.
 Se ele ultrapassar 80km/h mostre uma mensagem dizendo que ele foi multado.
 A multa vai custar R$ 7.00 por cada km acima do limite"""
+"""
 velocidade = int(input("Analisando a velocidade. . . "))
 diferenca = velocidade - 80
 
@@ -113,9 +114,17 @@ if velocidade > 80:
     print(f"Valor da multa: R${diferenca * 7} reais ")
 else:
     print(f"Velocidade atual: {velocidade} km/h")
+"""
+
 #Desafio 30:
 """Crie um programa para dizer se o numero digitado é par ou impar"""
+numero = int(input("Digite um número: "))
+resultado = numero % 2
 
+if resultado == 0:
+    print(f"O número {numero} é par!")
+else:
+    print(f"O número {numero} é ímpar")
 #Desafio 31:
 """
 Desenvolva um programa que pergunte a distancia de uma viagem em Km. Calcule o preço
