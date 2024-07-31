@@ -27,6 +27,16 @@ dezenas: 3
 centenas: 8
 milhar:1
 """
+num = int(input("Digite um numero: "))
+u = num // 1 % 10
+d = num //10 % 10
+c = num //100 % 10
+m = num //1000 % 10
+print(f"Anlisando o número {num}")
+print(f"Unidade: {u}")
+print(f"Dezena: {d}")
+print(f"Centena: {c}")
+print(f"Milhar: {m}")
 
 #Desagio 24:
 """Crie um programa que leia o nome de uma cidade e diga se ela começa ou não com o nome SANTO"""
