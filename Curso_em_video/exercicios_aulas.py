@@ -118,6 +118,7 @@ else:
 
 #Desafio 30:
 """Crie um programa para dizer se o numero digitado é par ou impar"""
+"""
 numero = int(input("Digite um número: "))
 resultado = numero % 2
 
@@ -125,10 +126,21 @@ if resultado == 0:
     print(f"O número {numero} é par!")
 else:
     print(f"O número {numero} é ímpar")
+"""    
+
 #Desafio 31:
 """
 Desenvolva um programa que pergunte a distancia de uma viagem em Km. Calcule o preço
 da passagem cobrando R$0,50 por Km para viagens de até 200km e R$0,45 para viagens mais longas
+"""
+"""
+distancia = int(input("Distância percorrida . . ."))
+if distancia <= 200:
+    print(f"Você percorreu {distancia} km")
+    print(f"Valor da corrida: {distancia * 0.50}")
+else:
+    print(f"Você percorreu {distancia} km")
+    print(f"Valor da corrida: {distancia * 0.45}")
 """
 
 #Desafio 32:
@@ -142,4 +154,12 @@ da passagem cobrando R$0,50 por Km para viagens de até 200km e R$0,45 para viag
 aumento de 15%"""
 
 #Desagfio 35:
-"""Desenvolva um porgrama que leia o comprimento de três retas e diga ao usuario se elas podem ou não formar um triangulo."""
+"""Desenvolva um programa que leia o comprimento de três retas e diga ao usuario se elas podem ou não formar um triangulo."""
+num1 = int(input(f"Digite o primeiro número: "))
+num2 = int(input(f"Digite o segundo número: "))
+num3 = int(input(f"Digite o terceiro número: "))
+
+if num1 == num2 == num3:
+    print(f"Os números {num1}, {num2} & {num3} formam um triângulo.")
+else:
+    print(f"Os números {num1}, {num2} & {num3} não formam um triângulo.")
