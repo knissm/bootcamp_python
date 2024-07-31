@@ -92,6 +92,8 @@ print(f"Primeiro nome: {lista[0]}")
 print(f"Último nome: {lista[-1]}")
 """
 
+###########################################################################################################
+
 #Desafio 28:
 """Escreva um programa que faça o computador pensar em um numero inteiro entre 0 e 5 e peça para o usuario
 tentar adivinhar qual foi o numero escolhido pelo computador. O programa devera escrever na tela se o usuario
@@ -103,7 +105,14 @@ print("Olá")
 """ Escreva um programa que leia a velocidade de um carro.
 Se ele ultrapassar 80km/h mostre uma mensagem dizendo que ele foi multado.
 A multa vai custar R$ 7.00 por cada km acima do limite"""
+velocidade = int(input("Analisando a velocidade. . . "))
+diferenca = velocidade - 80
 
+if velocidade > 80:
+    print("VOCÊ FOI MULTADO POR EXCESSO DE VELOCIDADE!")
+    print(f"Valor da multa: R${diferenca * 7} reais ")
+else:
+    print(f"Velocidade atual: {velocidade} km/h")
 #Desafio 30:
 """Crie um programa para dizer se o numero digitado é par ou impar"""
 
