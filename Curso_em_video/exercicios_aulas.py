@@ -43,10 +43,12 @@ print(f"Milhar: {m}")
 #Desagio 24:
 """Crie um programa que leia o nome de uma cidade e diga se ela começa ou não com o nome SANTO"""
 
+"""
 #RESOLUÇÃO
 nome_cidade = input("Digite o nome de uma cidade: ").strip()
 print(nome_cidade[:5].lower() == "santo")
 
+"""
 
 #Desafio 25:
 """Crie um programa que peça o nome de uma pessoa e diga se ela tem silva no nome"""
@@ -89,3 +91,37 @@ lista = nome_completo.split(" ")
 print(f"Primeiro nome: {lista[0]}")
 print(f"Último nome: {lista[-1]}")
 """
+
+#Desafio 28:
+"""Escreva um programa que faça o computador pensar em um numero inteiro entre 0 e 5 e peça para o usuario
+tentar adivinhar qual foi o numero escolhido pelo computador. O programa devera escrever na tela se o usuario
+acertou ou errou
+"""
+print("Olá")
+
+# Desafio 29:
+""" Escreva um programa que leia a velocidade de um carro.
+Se ele ultrapassar 80km/h mostre uma mensagem dizendo que ele foi multado.
+A multa vai custar R$ 7.00 por cada km acima do limite"""
+
+#Desafio 30:
+"""Crie um programa para dizer se o numero digitado é par ou impar"""
+
+#Desafio 31:
+"""
+Desenvolva um programa que pergunte a distancia de uma viagem em Km. Calcule o preço
+da passagem cobrando R$0,50 por Km para viagens de até 200km e R$0,45 para viagens mais longas
+"""
+
+#Desafio 32:
+"""Faça um programa que diga se o ano é bissexto ou não"""
+
+#Desafio 33:
+"""Faça um programa que leia 3 numeros e diga qual o maior e qual o menor"""
+
+#Desafio 34:
+"""Calcular o aumento de um usuario. se ele ganha até R$1.250,00 calcular um aumento de 10%. Para inferiores ou iguais, 
+aumento de 15%"""
+
+#Desagfio 35:
+"""Desenvolva um porgrama que leia o comprimento de três retas e diga ao usuario se elas podem ou não formar um triangulo."""
