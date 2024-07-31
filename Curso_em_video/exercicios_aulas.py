@@ -27,6 +27,7 @@ dezenas: 3
 centenas: 8
 milhar:1
 """
+"""
 num = int(input("Digite um numero: "))
 u = num // 1 % 10
 d = num //10 % 10
@@ -37,19 +38,15 @@ print(f"Unidade: {u}")
 print(f"Dezena: {d}")
 print(f"Centena: {c}")
 print(f"Milhar: {m}")
+"""
 
 #Desagio 24:
 """Crie um programa que leia o nome de uma cidade e diga se ela começa ou não com o nome SANTO"""
-"""
-RESOLUÇÃO
-nome_cidade = input("Digite o nome de uma cidade: ")
-nome_cidade_limpo = nome_cidade.lower()
 
-if "santo" in nome_cidade_limpo:
-    print(f"A cidade {nome_cidade} contém SANTO em seu nome!")
-else:
-    print(f"A cidade {nome_cidade} não contém SANTO em seu nome")
-"""
+#RESOLUÇÃO
+nome_cidade = input("Digite o nome de uma cidade: ").strip()
+print(nome_cidade[:5].lower() == "santo")
+
 
 #Desafio 25:
 """Crie um programa que peça o nome de uma pessoa e diga se ela tem silva no nome"""
