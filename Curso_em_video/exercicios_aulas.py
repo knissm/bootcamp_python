@@ -99,7 +99,15 @@ print(f"Último nome: {lista[-1]}")
 tentar adivinhar qual foi o numero escolhido pelo computador. O programa devera escrever na tela se o usuario
 acertou ou errou
 """
-print("Olá")
+"""
+from random import randint
+computador = randint(0,5)
+jogador = int(input("Em que numero eu pensei? Entre 0 e 5 . . ."))
+if jogador == computador:
+    print("Parabéns, você acertou!")
+else:
+    print(f"Você errou, tente novamente. {computador}")
+"""
 
 # Desafio 29:
 """ Escreva um programa que leia a velocidade de um carro.
@@ -145,6 +153,16 @@ else:
 
 #Desafio 32:
 """Faça um programa que diga se o ano é bissexto ou não"""
+from datetime import date
+ano = int(input("Que ano você quer analisar? Coloque 0 para analisar o ano atual: "))
+if ano == 0:
+    ano = date.today().year
+if ano % 4 == 0 and ano % 100 !=0 or ano % 400 == 0:
+    print(f"O ano {ano} é Bissexto")
+else:
+    print(f"O ano {ano} não é bissexto")
+
+
 
 #Desafio 33:
 """Faça um programa que leia 3 numeros e diga qual o maior e qual o menor"""
@@ -153,8 +171,9 @@ else:
 """Calcular o aumento de um usuario. se ele ganha até R$1.250,00 calcular um aumento de 10%. Para inferiores ou iguais, 
 aumento de 15%"""
 
-#Desagfio 35:
+#Desafio 35:
 """Desenvolva um programa que leia o comprimento de três retas e diga ao usuario se elas podem ou não formar um triangulo."""
+"""
 num1 = int(input(f"Digite o primeiro número: "))
 num2 = int(input(f"Digite o segundo número: "))
 num3 = int(input(f"Digite o terceiro número: "))
@@ -163,3 +182,4 @@ if num1 == num2 == num3:
     print(f"Os números {num1}, {num2} & {num3} formam um triângulo.")
 else:
     print(f"Os números {num1}, {num2} & {num3} não formam um triângulo.")
+"""
