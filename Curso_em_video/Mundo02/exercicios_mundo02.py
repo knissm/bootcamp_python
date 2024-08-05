@@ -229,6 +229,7 @@ else:
 #Crie um programa que leia o ano de nascimento de sete pessoas
 #No final, mostre quantas pessoas ainda não atingiram a maioridade
 #e quantas já são maiores
+"""
 soma_maior = 0
 soma_menor = 0
 from datetime import date
@@ -242,4 +243,5 @@ for i in range(1,8):
 
 print(f"{soma_maior} já são maiores de idade.")
 print(f"{soma_menor} ainda não são maiores de idade")
+"""
  
