@@ -152,3 +152,72 @@ if computador == usuario:
 else:
     print(f"Computador escolheu {computador}. Usuario escolheu {usuario}")
 """
+
+#46
+# Faça um programa que mostre na tela
+# Uma contagem regressiva para o estouro e fogos de artifício,
+# Indo de 10 até 0, com uma pausa de 1 segundo entre eles.
+"""
+from time import sleep
+for c in range(-10,0):
+    print(c * -1)
+    sleep(1)
+print("BUM")
+"""
+
+#47
+# Crie um programa que mostre na tela todos os números pares
+# que estão no intervalo entre 1 e 50
+"""
+from time import sleep
+for num in range(1,51):
+    if num % 2 == 0:
+        print(num)
+        sleep(0.2)
+"""
+
+#48
+# Faça um programa que calcule a soma entre todos os números impares
+# que são múltiplos de três (3) e que se encontram no intervalo de 1 até 500.
+"""
+s = 0
+for n in range(1,51):
+    if n % 2 != 0: 
+        if n % 3 == 0:
+            s += n #s = s + n
+print(f"Soma dos multiplos de 3: {s}")
+"""
+
+#49
+#Refaça o desafio 009, mostrando a tabuada de um número
+#que o usuário escolher, só que agora utilizando um laço for
+"""
+print("_" *25)
+print("TABUADA")
+print("_" *25)
+numero = int(input("Digite um número: "))
+for i in range(1,11):
+    print(f"{i} x {numero} = {i*numero}")
+"""
+
+#50
+#Desenvolva um programa que leia seis números inteiros
+#e mostre a soma apenas daqueles que forem pares
+#Se o valor digitado for ímpar, desconsidere-o.
+"""
+soma = 0
+for i in range(1,7):
+    numeros = int(input(f"Digite o {i}º número: "))
+
+    if numeros % 2 == 0:
+        soma+=numeros
+print(soma)
+"""
+
+#51
+#Crie um programa que leia uma frase qualquer
+#E diga se ela é um palíndromo, desconsiderando os espaços
+
+frase = str(input("Digite uma frase: \n")).lower()
+frase = "".join(frase.split(" "))
+print(frase[::-1])
