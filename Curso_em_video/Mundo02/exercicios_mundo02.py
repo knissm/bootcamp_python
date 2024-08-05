@@ -214,10 +214,32 @@ for i in range(1,7):
 print(soma)
 """
 
-#51
+#53
 #Crie um programa que leia uma frase qualquer
 #E diga se ela é um palíndromo, desconsiderando os espaços
-
+"""
 frase = str(input("Digite uma frase: \n")).lower()
 frase = "".join(frase.split(" "))
-print(frase[::-1])
+if frase == frase[::-1]:
+    print(f"A frase {frase} é um palíndromo!")
+else:
+    print(f"A frase {frase} não é um palíndromo!")
+"""
+#54
+#Crie um programa que leia o ano de nascimento de sete pessoas
+#No final, mostre quantas pessoas ainda não atingiram a maioridade
+#e quantas já são maiores
+soma_maior = 0
+soma_menor = 0
+from datetime import date
+ano_atual = date.today().year
+for i in range(1,8):
+    idades = int(input(f"Digite a idade da {i}° pessoa: "))
+    if ano_atual - idades >=18:
+        soma_maior += 1
+    elif ano_atual - idades <= 17:
+        soma_menor += 1
+
+print(f"{soma_maior} já são maiores de idade.")
+print(f"{soma_menor} ainda não são maiores de idade")
+ 
