@@ -251,7 +251,7 @@ print(f"{soma_menor} ainda não são maiores de idade")
 # A media de idade do grupo
 # Qual o nome do homem mais velho
 # Quantas mulheres tem menos de 20 anos.
-
+"""
 soma_idade = 0
 maior_idade_homem = 0
 nome_mais_velho = ''
@@ -279,3 +279,4 @@ for i in range(1,5):
 print(f"A Média de idade do grupo é: {int(media_idade)}")
 print(f"O homem mais velho tem {maior_idade_homem} anos e e chama {nome_mais_velho}")
 print(f"Menores de 20 e mulheres: {menor_vinte}")
+"""
