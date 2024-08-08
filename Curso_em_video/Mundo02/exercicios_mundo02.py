@@ -286,7 +286,7 @@ print(f"Menores de 20 e mulheres: {menor_vinte}")
 #mas só aceite os valores "M" ou "F".
 #Caso esteja errado, peça a digitação novamente
 #até ter um valor correto.
-
+"""
 sexo = str(input("Digite seu sexo: ")).strip().lower()[0]
 while sexo not in "mMfF":
     sexo = str(input("Entrada inválida. Digite M ou F: "))
@@ -297,3 +297,51 @@ if sexo == 'm' or sexo =='f':
     elif sexo == 'f':
         print("Entrada inserida com sucesso! Sexo Feminino!")
 print("Bye!")
+"""
+
+#59
+#Crie um programa que leia dois valores e mostre um menu na tela:
+# 1: somar
+# 2: multiplicar
+# 3: maior
+# 4: novos números
+# 5: sair do programa
+# Seu programa deverá realizar a operação solicitada em cada caso
+
+num1 = int(input("Digite o primeiro número: "))
+num2 = int(input("Digite o segundo número: "))
+
+escolha = int(input(" 1: Somar \n 2: Multiplicar \n 3: Maior \n 4: Novos números \n 5: Sair do Programa \n "))
+
+while escolha != 5:
+    if escolha >5:
+        print("ESCOLHA UMA DAS OPÇÕES ABAIXO!")
+        escolha = int(input(" 1: Somar \n 2: Multiplicar \n 3: Maior \n 4: Novos números \n 5: Sair do Programa \n "))
+
+    elif escolha <1:
+        print("ESCOLHA UMA DAS OPÇÕES ABAIXO!")
+        escolha = int(input(" 1: Somar \n 2: Multiplicar \n 3: Maior \n 4: Novos números \n 5: Sair do Programa \n "))
+
+    elif escolha == 1:
+        print("Você escolheu: SOMA")
+        print(f"A Soma dos números {num1} e {num2} é: {num1 + num2}")
+        print("")
+        escolha = int(input(" 1: Somar \n 2: Multiplicar \n 3: Maior \n 4: Novos números \n 5: Sair do Programa \n "))
+    
+    elif escolha == 2:
+        print("Você escolheu: MULTIPLICAR")
+        print(f"A multiplicação do número {num1} com o número {num2} é: {num1 * num2} ")
+        print("")
+        escolha = int(input(" 1: Somar \n 2: Multiplicar \n 3: Maior \n 4: Novos números \n 5: Sair do Programa \n "))
+
+    elif escolha == 3:
+        print("Você escolheu: MAIOR")
+        print(f"Entre os números{num1} e {num2}, o maior é: {max(num1,num2)} ")
+        print("")
+        escolha = int(input(" 1: Somar \n 2: Multiplicar \n 3: Maior \n 4: Novos números \n 5: Sair do Programa \n "))
+
+    elif escolha == 4:
+        num1 = int(input("Digite o primeiro número: "))
+        num2 = int(input("Digite o segundo número: "))
+        escolha = int(input(" 1: Somar \n 2: Multiplicar \n 3: Maior \n 4: Novos números \n 5: Sair do Programa \n "))
+print(". . . ENCERRANDO SISTEMA. . . ")
