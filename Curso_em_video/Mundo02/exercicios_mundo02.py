@@ -308,6 +308,7 @@ print("Bye!")
 # 5: sair do programa
 # Seu programa deverá realizar a operação solicitada em cada caso
 
+"""
 num1 = int(input("Digite o primeiro número: "))
 num2 = int(input("Digite o segundo número: "))
 
@@ -345,46 +346,36 @@ while escolha != 5:
         num2 = int(input("Digite o segundo número: "))
         escolha = int(input(" 1: Somar \n 2: Multiplicar \n 3: Maior \n 4: Novos números \n 5: Sair do Programa \n "))
 print(". . . ENCERRANDO SISTEMA. . . ")
+"""
 
-'''
-Escreva um programa que leia um número n inteiro qualquer
-e mostre na tela os primeiros n elementos e uma sequência de Fibonacci
+#65
+# Crie um programa que leia vários números inteiros pelo teclado
+# No final da execução, mostre a média entre todos os valores
+# e qual foi o maior e o menor valores lidos
+# O programa deve perguntar ao usuário se ele quer ou não continuar a digitar valores.
 
-1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584 (...)
+continua = "s"
+soma = 0
+cnt = 0
+maior = 0
+menor = 0
+while continua not in "nN":
+    num = int(input("Digite um número: "))
+    continua = str(input("Continuar a Digitar valores? "))[0]
 
-'''
-# Minha resolução:
+    soma = soma + num #soma +=n
+    cnt = cnt + 1 # cnt +=1
+    media = soma / cnt
 
-user = int(input("Números de termos da sequência de Fibonacci que você deseja printar: \nfn = "))
+    if num > maior:
+        maior = num
+    if menor == 0:
+        menor = num
+    elif num < menor:
+        menor = num
 
-prevfn = 0
-fn = 1
-nextfn = 0
-index = 0
-
-while index < user:
-    prevfn = fn
-    fn = nextfn
-    nextfn = (fn + (prevfn))
-    print("f{} = {}".format(index, fn))
-    index += 1
-print("Fim!")
-
-'''
-# Resolução do Gustavo Guanabara:
-
-n = int(input("Termos: \n"))
-t1 = 0
-t2 = 1
-print("{} > {}".format(t1, t2), end="")
-cont = 3
-while cont <= n:
-    t3 = t1 + t2
-    print(" > {}".format(t3), end="")
-    t1 = t2
-    t2 = t3
-    cont += 1
-print(" > Fim!")
-'''
-
-# Achei o meu código mais elegante que o dele.
+print(f"Soma dos números: {soma}")
+print(f"Quantidade de números inseridos: {cnt}")
+print(f"Media dos números inseridos: {media:.0f}")
+print(f"Número mais baixo: {menor}")
+print(f"Número mais alto: {maior}")
