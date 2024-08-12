@@ -426,6 +426,7 @@ while True:
 # b) quantos homens foram cadastrados
 # c) quantas mulheres têm menos de 20 anos'''
 
+"""
 maior_18 = 0
 cnt_homem = 0
 cnt_mulher_maior_18 = 0
@@ -443,7 +444,6 @@ while True:
         sexo = str(input("Entrada Inválida. Digite um sexo válido M/F: "))
     elif sexo == 'm':
         cnt_homem += 1
-    
     elif  sexo == 'f' and idade > 20:
         cnt_mulher_maior_18 += 1
 
@@ -459,3 +459,53 @@ print(f"Existem {maior_18} pessoas com mais de 18 anos.")
 print(f"Existem {cnt_homem} homens cadastrados")
 print(f"Existem {cnt_mulher_maior_18} mulheres maiores de 18 anos")
 print('FIM DA EXECUÇÃO . . .')
+"""
+
+#70
+# Crie um programa que leia o nome e o preço de vários produtos.
+# O programa deverá perguntar se o usuário vai continuar.
+# No final, mostre:
+# a) qual é o total gasto na compra
+# b) quantos produtos custam mais de R$ 1000
+# c) qual é o nome do produto mais barato
+
+"""
+total_soma = 0
+produto_maior_100 = 0
+preco_produto_mais_barato = 0
+nome_produto_mais_barato = ""
+
+while True:
+    nome_produto = str(input("Produto: "))
+
+    preco_produto = float(input("Preço R$: "))
+    if preco_produto <0 or preco_produto >99999:
+        preco_produto = float(input("Entre com um Preço R$ válido: "))
+    else:
+        total_soma += preco_produto
+
+    if preco_produto > 1000:
+        produto_maior_100 += 1
+    
+    if preco_produto_mais_barato == 0:
+        preco_produto_mais_barato = preco_produto
+        nome_produto_mais_barato = nome_produto
+        
+    elif preco_produto < preco_produto_mais_barato:
+        nome_produto_mais_barato = nome_produto
+
+
+    continua = str(input("Continua? S/N: ")).lower().strip()[0]
+    if continua == 'n':
+        break
+    if continua not in "sn":
+        continua = str(input("Entrada Inválida. Continua? S/N: ")).lower().strip()[0]
+    if continua == 'n':
+        break
+
+print(f"Soma total: R${total_soma}")
+print(f"Produtos que custam mais de R$ 1.000,00: {produto_maior_100}")
+print(f"Nome do produto mais barato: {nome_produto_mais_barato}")
+
+print("Fim da execução")
+"""
