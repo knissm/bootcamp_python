@@ -380,3 +380,82 @@ print(f"Media dos números inseridos: {media:.0f}")
 print(f"Número mais baixo: {menor}")
 print(f"Número mais alto: {maior}")
 """
+
+#66
+# Crie um programa que leia vários números inteiros pelo teclado
+# O programa só vai parar quando o usuário digitar 999,
+# que é a condição de parada (flag).
+# No final, mostre quantos números foram digitados
+# e qual foi a acc entre eles (desconsiderando o flag)
+"""
+contagem = soma = 0
+
+while True:
+    num = int(input("Digite um número [999] para parar: "))
+    if num == 999:
+        break
+    else:
+        contagem += 1
+        soma += num
+print(f"Foram digitados {contagem} número(s).")
+print(f"A soma entre eles é {soma}")
+"""
+
+#67
+# Faça um programa que mostre a tabuada de vários números,
+# um de cada vez, para cada valor digitado pelo usuário.
+# O programa será interrompido quando o número solicitado for negativo
+"""
+while True:
+    numero = int(input("Digite um número:"))
+    if numero <0:
+        print("Você Digitou um número negativo. ")
+        print("Encerrando o programa . . .")
+        break
+    else:
+        for i in range(1,11):
+            print(f"{numero} x {i} = {numero*i}")
+"""
+
+#69
+# Crie um programa que leia a idade e o sexo de várias pessoas.
+# A cada pessoa cadastrada, o programa deverá perguntar
+# se o usuário quer ou não continuar.
+# No final, mostra:
+# a) quantas pessoas têm mais de 18 anos
+# b) quantos homens foram cadastrados
+# c) quantas mulheres têm menos de 20 anos'''
+
+maior_18 = 0
+cnt_homem = 0
+cnt_mulher_maior_18 = 0
+
+while True:
+    idade = int(input("Digite sua idade: "))
+    
+    if idade <0 or idade>100:
+        idade = int(input("Entrada Inválida. Digite sua Idade: "))
+    elif idade > 18:
+         maior_18 += 1
+    
+    sexo = str(input("Digite seu sexo: ")).lower()[0]
+    if sexo not in "mf":
+        sexo = str(input("Entrada Inválida. Digite um sexo válido M/F: "))
+    elif sexo == 'm':
+        cnt_homem += 1
+    
+    elif  sexo == 'f' and idade > 20:
+        cnt_mulher_maior_18 += 1
+
+    continua = str(input("Deseja continuar? S/N: ")).lower()[0]
+    if continua == 'n':
+        break
+    if continua not in "sn":
+        continua = str(input("Entrada Inválida. Uma opção válida S/N: ")).lower()[0]
+        if continua == 'n':
+            break
+    
+print(f"Existem {maior_18} pessoas com mais de 18 anos.")
+print(f"Existem {cnt_homem} homens cadastrados")
+print(f"Existem {cnt_mulher_maior_18} mulheres maiores de 18 anos")
+print('FIM DA EXECUÇÃO . . .')
