@@ -515,7 +515,7 @@ print("Fim da execução")
 # No início, pergunte ao usuário qual será o valor a ser sacado (inteiro)
 # e o programa vai informar quantas cédulas de cada valor serão entregues.
 # Obs.: Considere que o caixa possui cédulas de R$50, R$20, R$10 e R$1.
-
+"""
 print('='*30)
 print('{:^30}'.format('R$ Banco R$'))
 print('='*30)
@@ -538,7 +538,9 @@ while True:
         elif ced == 10:
             ced = 1
         totced = 0
+        
         if total == 0:
             break
 print('=' * 30)
 print("Volte sempre!")
+"""
