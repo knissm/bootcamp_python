@@ -10,5 +10,10 @@ print(lanche2[-1])
 print(len(lanche2))
 
 for c in lanche2:
-    print(c[0])
+    print(c)
 
+""" 
+
+AS TUPLAS SÃO IMUTÁVEIS 
+
+"""

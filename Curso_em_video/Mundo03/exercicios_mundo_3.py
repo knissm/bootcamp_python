@@ -31,7 +31,7 @@ while True:
 # c) uma lista com os times em ordem alfabética
 # d) em que posição na tabela está o time da Chapecoense
 
-
+"""
 times = (
     "Atlético", "Flamengo", "Corinthians", "Palmeiras", "Fluminense",
     "América-MG", "São Paulo", "Grêmio", "Vasco da Gama", "Botafogo",
@@ -56,3 +56,5 @@ for indice, ordenados in enumerate(sorted(times)):
 print("=" * 20)
 
 print(f"Time 'Chapecoense' está posição número {times.index("Chapecoense")}")
+
+"""
