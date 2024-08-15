@@ -144,14 +144,13 @@ listagem = (
     "frango", 10.90
       )
 
-print("=" * 35)
-print("Tela preta, letra verde.")
-print("=" * 35)
+# 77
 
-produto = 0
-preco = 1
+#Crie um programa que tenha uma tupla com várias palavras (não usar acentos).
+# Depois disso, você deve mostrar, para cada palavra, quais são as suas vogais
 
-for item in range(0, len(listagem)// 2):
-    print(f"{listagem[produto]:.<30} R${listagem[preco]:>7.2f}")
-    preco += 2
-    produto += 2
+
+tupla = (
+    "Galadriel", "Luthien Tinuviel", "Erik Killmonger", 
+    "Kendrick Lamar", "Charlotte Galves", "Roberta Pires", "Amanda"
+    )
