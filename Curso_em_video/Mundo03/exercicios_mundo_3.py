@@ -137,12 +137,21 @@ print(f"Números Pares: {pares}")
 # No final, mostre uma listagem de precos,
 # organizando os dados em forma tabular
 
-
+"""
 listagem = (
     "pão", 1,
     "leite", 3.50,
-    "frango", 10.90
-      )
+    "frango", 10.90,
+    "Arroz",19.90
+)
+produto = -2
+valor = -1
+
+for i in range(0,len(listagem) //2 ):
+    produto += 2
+    valor += 2
+    print(f"{listagem[produto].capitalize()} ... R$ {listagem[valor]}")
+"""
 
 # 77
 
@@ -151,6 +160,22 @@ listagem = (
 
 
 tupla = (
-    "Galadriel", "Luthien Tinuviel", "Erik Killmonger", 
-    "Kendrick Lamar", "Charlotte Galves", "Roberta Pires", "Amanda"
+    "Marcelo", "Luthien Tinuviel", "Erik Killmonger", 
+    "Kendrick Lamar", "Charlotte Galves", "Roberta Pires", "Amanda", "hue"
     )
+
+vogais = ["a","e","i","o","u"]
+
+
+
+for nome in tupla:
+    nome = str(nome).lower()
+    lista = []
+    
+    for letra in nome:
+       for i in vogais:
+            if letra == i:
+                lista.append(letra)
+
+    print(f"{nome.capitalize()}: {len(lista)} vogais")
+
