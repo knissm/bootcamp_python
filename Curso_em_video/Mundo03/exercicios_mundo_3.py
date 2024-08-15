@@ -104,7 +104,7 @@ print(f"Menor valor: {min(tupla)}")
 # a) quantas vezes apareceu o valor 9
 # b) em que posição foi digitado o primeiro valor 3
 # b) quais foram os números pares
-
+"""
 n_tupla = []
 for i in range(1,5):
     n = int(input(f"Digite o número {i}: "))
@@ -126,3 +126,4 @@ for num in n_tupla:
     if num % 2 == 0:
         pares.append(num)
 print(f"Números Pares: {pares}")
+"""
