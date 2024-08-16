@@ -64,6 +64,12 @@ valores = list()
 
 for i in range(0,5):
     valor = int(input(f"Digite o valor número {i+1}: "))
+    #valores.append(int(input(f"Digite o valor número {i+1}: ")))
     valores.append(valor)
 
 print(f"Os valores digitados foram: {valores}")
+
+a = [1,2,3,4]
+b = a # Dessa forma a lista a criará uma ligação com a B e qualquer valor moficado na A, também será na B (vice versa)
+
+b = a[:] # Dessa forma eu faço uma cópia de todos os valores da lista a para a b, sem criar a ligação entre as listas
