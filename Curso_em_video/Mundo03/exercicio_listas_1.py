@@ -66,7 +66,6 @@ for i in range(0,5):
     valor = int(input(f"Digite o valor número {i+1}: "))
     #valores.append(int(input(f"Digite o valor número {i+1}: ")))
     valores.append(valor)
-    valores.append(valor)
 
 print(f"Os valores digitados foram: {valores}")
 
