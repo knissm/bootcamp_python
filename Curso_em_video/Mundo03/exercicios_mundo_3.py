@@ -158,7 +158,7 @@ for i in range(0,len(listagem) //2 ):
 #Crie um programa que tenha uma tupla com várias palavras (não usar acentos).
 # Depois disso, você deve mostrar, para cada palavra, quais são as suas vogais
 
-
+"""
 tupla = (
     "Marcelo", "Luthien Tinuviel", "Erik Killmonger", 
     "Kendrick Lamar", "Charlotte Galves", "Roberta Pires", "Amanda", "hue"
@@ -178,4 +178,91 @@ for nome in tupla:
                 lista.append(letra)
 
     print(f"{nome.capitalize()}: {len(lista)} vogais")
+"""
 
+# 78
+# Faça um programa que leia 5 valores números e guarde-os em uma lista.
+# No final, mostre qual foi o maior e o menor valor digitados e as suas respectivas posições na lista.
+
+"""
+valores = []
+maior = menor = 0
+pos_maior = []
+pos_menor = []
+n = 0
+
+while n < 5:
+    valores.append(int(input(f"Digite o {n+1}° valor: ")))
+    n+=1
+
+maior = max(valores)
+menor = min(valores)
+
+print("Os valores digitados são: ")
+for index,val in enumerate(valores):
+    if val == maior:
+        pos_maior.append(index)
+    if val == menor:
+        pos_menor.append(index)
+
+    print(f" Número {index+1}: {val}")
+
+print(f"O maior número é o número {maior} e sua posição é {pos_maior}")
+print(f"O menor número é {menor} e sua posição é {pos_menor}")
+"""
+
+# 79
+
+#Crie um programa onde o usuário possa digitar vários valores numéricos e cadastre-os em uma lista.
+
+#Caso o número já exista lá dentro, ele não será adicionado.
+#No final, serão exibidos todos os valores únicos digitados, em ordem crescente.
+"""
+numeros = []
+
+while True:
+    entrada = int(input("Digite um número: "))
+    if entrada in numeros:
+        print(f"O número {entrada} já conta na lista.")
+    else:
+        numeros.append(entrada)
+        print("Adicionado com sucesso!")
+
+    keep = str(input("Deseja continuar? [S/N]: "))
+    if keep[0] == 'n':
+        break
+    if keep[0] =='s':
+        print("Continuando..")
+    else:
+        print("Entrada inválida! Digite [S/N]: ")
+
+print(sorted(numeros))
+"""
+
+# 81
+
+# Crie um programa que vai ler vários números e colocá-los em uma lista
+# Depois disso, mostre:
+# a) quantos números foram digitados.
+# b) a lista de valores, ordenada de forma decrescente
+# c) se o valor 5 foi digitado e está ou não na lista.
+numeros = []
+while True:
+    numeros.append(int(input("Digite um número: ")))    
+    flag = str(input("Deseja continuar? [S/N]: "))[0].lower().strip()
+    if flag == 's':
+        print('Continuando . . .')
+    elif flag == 'n':
+        break
+    else:
+        print("Entrada invalida. Digite [S/N]")
+
+numeros.sort(reverse = True)
+
+print(f"Foram digitados {len(numeros)} números!")
+print(f"Os números em forma reversa são: {numeros}")
+
+if 5 in numeros:
+    print(f"O número 5 foi digitado.")
+else:
+    print("O número 5 não foi digitado nem uma vez")
