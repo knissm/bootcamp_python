@@ -246,6 +246,7 @@ print(sorted(numeros))
 # a) quantos números foram digitados.
 # b) a lista de valores, ordenada de forma decrescente
 # c) se o valor 5 foi digitado e está ou não na lista.
+"""
 numeros = []
 while True:
     numeros.append(int(input("Digite um número: ")))    
@@ -266,3 +267,32 @@ if 5 in numeros:
     print(f"O número 5 foi digitado.")
 else:
     print("O número 5 não foi digitado nem uma vez")
+"""
+
+# 82
+# Crie um programa que vai ler vários números e colocar em uma lista.
+# Depois disso, crie duas listas extras que vão conter apenas os valores pares
+# e os valores ímpares digitados, respectivamente. Ao final, mostre o conteúdo das três listas geradas.
+numeros = []
+pares = []
+impares = []
+
+while True:
+    numeros.append(int(input("Digite um número: ")))
+    flag = str(input("Deseja continuar? S/N: "))[0].lower().strip()
+    if flag == 's':
+        print("Continuando . . .")
+    elif flag == 'n':
+        break
+    else:
+        print("Entrada inválida! Digite S/N")
+
+for i in numeros:
+    if i % 2 ==0:
+        pares.append(i)
+    else:
+        impares.append(i)
+
+print(f"Números pares: {pares}")
+print(f"Números ímpares: {impares}")
+print(f"Lista completa: {numeros}")
