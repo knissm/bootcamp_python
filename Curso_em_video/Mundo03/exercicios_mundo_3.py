@@ -273,6 +273,7 @@ else:
 # Crie um programa que vai ler vários números e colocar em uma lista.
 # Depois disso, crie duas listas extras que vão conter apenas os valores pares
 # e os valores ímpares digitados, respectivamente. Ao final, mostre o conteúdo das três listas geradas.
+"""
 numeros = []
 pares = []
 impares = []
@@ -296,3 +297,62 @@ for i in numeros:
 print(f"Números pares: {pares}")
 print(f"Números ímpares: {impares}")
 print(f"Lista completa: {numeros}")
+"""
+
+#84
+
+# Faça um programa que leia nome e peso de várias pessoas guardando tudo em uma lista.
+# No final, mostre:
+
+# a: quantas pessoas foram cadastradas.
+# b: uma listagem com as pessoas mais pesadas
+# c: uma listagem com as pessoas mais leves
+
+# Obs.: Gerar uma lista com os mais leves e mais pesados
+# Vai depender de analisar qual é o mais leve e o mais pesado.
+# Se houver mais de um com esse peso, insere na lista.
+# O mais normal é que a lista de mais pesados tenha apenas 1 pessoa,
+# que é o motivo pelo qual a lista existe.
+
+entrada = []
+dados = []
+pesos = []
+cnt = 0
+while True:
+    entrada.append(str(input("Nome: ")))
+    entrada.append(int(input("Peso: ")))
+    dados.append(entrada[:])
+    entrada.clear()
+    cnt +=1
+
+    flag = str(input("Continua? S/N: "))[0].lower().strip()
+    if flag =='n':
+        break
+    elif flag == 's':
+        print("Continuando . . .")
+    else:
+        print('Entrada inválida. S/N para continuar')
+print(dados)  
+
+for i in dados:
+    pesos.append(i[1])
+
+pesos = sorted(pesos)
+
+menor = pesos[0]
+maior = pesos[-1]
+
+# pessoas mais pesadas
+mais_pesado = []
+mais_leve = []
+
+for i in dados:
+    if i[1] == maior:
+        mais_pesado.append(i[0])
+    if i[1] == menor:
+        mais_leve.append(i[0])
+
+
+print(f"Pessoas cadastradas: {cnt}")
+print(f"Maior peso {maior} kg do(a) {mais_pesado}")
+print(f"Menor peso {menor} kg do(a) {mais_leve}")
