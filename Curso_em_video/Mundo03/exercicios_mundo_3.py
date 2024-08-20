@@ -313,7 +313,7 @@ print(f"Lista completa: {numeros}")
 # Se houver mais de um com esse peso, insere na lista.
 # O mais normal é que a lista de mais pesados tenha apenas 1 pessoa,
 # que é o motivo pelo qual a lista existe.
-
+"""
 entrada = []
 dados = []
 pesos = []
@@ -356,3 +356,45 @@ for i in dados:
 print(f"Pessoas cadastradas: {cnt}")
 print(f"Maior peso {maior} kg do(a) {mais_pesado}")
 print(f"Menor peso {menor} kg do(a) {mais_leve}")
+"""
+
+#85
+
+# Crie um programa onde o usuário possa digitar
+# sete valores numéricos
+# e cadastre-os em uma lista única
+# que mantenha separados os valores pares e ímpares.
+# No final, mostre os valores pares e ímpares
+# em ordem crescente.
+
+"""
+lista = [[],[]]
+
+for i in range(0,10):
+    entrada = int(input(f"Digite o número {i+1}:"))
+    
+    if entrada %2 == 0:
+        lista[0].append(entrada)
+    else:
+        lista[1].append(entrada)
+
+print(f"Lista completa: {lista}")
+print(f"Lista com os números pares ordenados: {sorted(lista[0])}")
+print(f"Lista com os números ímpares ordenados: {sorted(lista[1])}")
+"""
+
+#86
+
+# Crie um programa que crie uma matriz 3.3
+# e preencha com valores lidos pelo teclado.
+# No final, mostre a matriz na tela com a formatação correta
+
+entrada = []
+lista = []
+
+for i in range(0,3): #para cada linha
+    for j in range(0,3): #para cada coluna em uma linha
+        entrada.append(int(input("Número: ")))
+    lista.append(entrada[:])
+    entrada.clear()
+    print(lista)
