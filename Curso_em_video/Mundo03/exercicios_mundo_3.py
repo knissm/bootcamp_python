@@ -400,3 +400,63 @@ for i in range(0,3): #para cada linha
     entrada.clear()
 print(lista)
 """
+
+# 90
+"""
+Faça um programa que leia nome e média de um aluno,
+guardando também a situação em um dicionário.
+
+No final, mostre o conteúdo da estrutura na tela.
+"""
+"""
+aluno = dict()
+
+aluno['nome'] = str(input("Digite o nome do Aluno: "))
+aluno['media'] = int(input("Digite a média do Aluno:"))
+
+if aluno['media'] >= 7:
+    aluno['situacao'] = 'Aprovado'
+elif aluno['media'] < 7:
+    aluno['situacao'] = "Em Recuperação"
+else:
+    aluno['situacao'] = 'Reprovado'
+
+print(f"O aluno {aluno['nome']} possui média {aluno['media']}. Sua situação é {aluno['situacao'].upper()}")
+
+# 91
+"""
+
+"""
+Crie um programa onde 4 jogadores joguem um dado
+e tenham resultados aleatórios.
+Guarde esses resultados em um dicionário.
+
+No final, coloque esse dicionário em ordem,
+sabendo que o vencedor tirou o maior número no dado
+"""
+from random import randint
+from time import sleep
+from operator import itemgetter
+
+jogo = {
+    'jogador 01': randint(1,6),
+    'jogador 02': randint(1,6),
+    'jogador 03': randint(1,6),
+    'jogador 04': randint(1,6)
+}
+
+ranking = list()
+
+print('Valores sorteados: ')
+print('=' * 35)
+
+for k, v in jogo.items():
+    print(f"O {k} tirou {v} no dado")
+    sleep(1)
+
+ranking = sorted(jogo.items(), key = itemgetter(1), reverse=True)
+print(ranking)
+
+for i,v in enumerate(ranking):
+    print(f" {i+1} lugar: {v[0]} com {v[1]}.")
+    sleep
