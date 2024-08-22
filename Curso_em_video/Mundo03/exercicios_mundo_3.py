@@ -389,6 +389,7 @@ print(f"Lista com os números ímpares ordenados: {sorted(lista[1])}")
 # e preencha com valores lidos pelo teclado.
 # No final, mostre a matriz na tela com a formatação correta
 
+"""
 entrada = []
 lista = []
 
@@ -397,4 +398,5 @@ for i in range(0,3): #para cada linha
         entrada.append(int(input("Número: ")))
     lista.append(entrada[:])
     entrada.clear()
-    print(lista)
+print(lista)
+"""
