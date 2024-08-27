@@ -474,6 +474,7 @@ a pessoa vai se aposentar.
 
 Obs.: aposentadoria em 35 anos de contribuição.
 """
+"""
 from datetime import datetime
 dados = dict()
 dados['nome'] = str(input('Nome: '))
@@ -489,6 +490,7 @@ if dados['ctps'] != 0:
 
 for k,v in dados.items():
     print(f" - {k} tem o valor de {v}")
+"""
 
 #93
 """
@@ -497,6 +499,31 @@ O programa vai ler o nome do jogador e quantas partidas ele jogou.
 Depois vai ler a quantidade de gols feitos em cada partida.
 No final, tudo isso será guardado em um dicionário,
 incluindo o total de gols feitos durante o campeonato.
+"""
+"""
+jogador = {}
+partidas = []
+jogador['nome'] = str(input("Nome do Jogador: "))
+tot = int(input(f"Quantas partidas o jogador {jogador['nome']} jogou? "))
+
+for c in range(0,tot):
+    partidas.append(int(input(f"Quandos gols na partida {c} ?")))
+jogador['gols'] = partidas[:]
+jogador['total'] = sum(partidas)
+
+print('-=' * 30)
+print(jogador)
+print('-=' * 30)
+
+for k, v in jogador.items():
+    print(f"O campo {k} tem o valor de {v}")
+print('-=' * 30)
+
+print(f"O jogador {jogador['nome']} jogou {len(jogador['gols'])} partidas.")
+
+for i,v in enumerate(jogador['gols']):
+    print(f"     => Na partida {i+1}, fez {v} gols ")
+print(f"Foi um total de {jogador['total']} gols.")
 """
 
 #94
@@ -511,7 +538,45 @@ b. A média de idade do grupo
 c. uma lista com todas as mulheres
 d. uma lista com todas as pessoas com idade acima da média.
 """
+galera = list()
+pessoa = dict()
+soma = media = 0
+while True:
+    pessoa.clear()
+    pessoa['nome'] = str(input('Nome: '))
+    while True:
+        pessoa['sexo'] = str(input("Sexo: [M/F]: ")).upper()[0]
+        if pessoa['sexo'] in 'MF':
+            break
+        print('ERRO! Por favor, digite apenas M ou F.')
+    pessoa['idade'] = int(input("Idade: ")) 
+    soma += pessoa['idade']
+    galera.append(pessoa.copy())
+    while True:
+        resposta = str(input("Quer contiuar? [S/N]: ")).upper()[0]
+        if resposta in "SN":
+            break
+        print('Erro! Responda apenas S ou N')
+    if resposta =="N":
+        break
 
+print('-=' * 30)
+print(f"Ao todo temos {len(galera)} pessoas cadastradas.")
+media = soma / len(galera)
+print(f" A media da ideia é de {media:5.2f} anos")
+print(f"As mulheres cadastradass foram ", end="")
+for p in galera:
+    if p['sexo'] in 'fF':
+        print(f"{p['nome']} ", end = "")
+
+print(f"Lista das pessoas que estão acima da média: ")
+for p in galera:
+    if p['idade'] >= media:
+        print('    ', end = "")
+        for k, v in p.items():
+            print(f" {k} = {v}", end = "")
+        print()
+print("<< ENCERRADO >>")
 #95
 """
 Aprimore o DESAFIO 093 para que ele funcione com vários jogadores,
