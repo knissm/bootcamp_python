@@ -538,6 +538,7 @@ b. A média de idade do grupo
 c. uma lista com todas as mulheres
 d. uma lista com todas as pessoas com idade acima da média.
 """
+"""
 galera = list()
 pessoa = dict()
 soma = media = 0
@@ -559,7 +560,8 @@ while True:
         print('Erro! Responda apenas S ou N')
     if resposta =="N":
         break
-
+## até aqui é a leitura
+##daqui pra baixo é a analise
 print('-=' * 30)
 print(f"Ao todo temos {len(galera)} pessoas cadastradas.")
 media = soma / len(galera)
@@ -577,9 +579,38 @@ for p in galera:
             print(f" {k} = {v}", end = "")
         print()
 print("<< ENCERRADO >>")
+"""
 #95
 """
 Aprimore o DESAFIO 093 para que ele funcione com vários jogadores,
 incluindo um sistema de visualização de detalhes de aproveitamento 
 de cada jogador.
 """
+time = list()
+jogador = dict()
+partidas = list()
+
+while True:
+    jogador['nome'] = str(input("Nome do Jogador: "))
+    tot = int(input(f"Quantas partidas o jogador {jogador['nome']} jogou? "))
+
+    for c in range(0,tot):
+        partidas.append(int(input(f"Quandos gols na partida {c} ?")))
+    jogador['gols'] = partidas[:]
+    jogador['total'] = sum(partidas)
+    time.append(jogador.copy())
+    while True:
+        resp = str(input("Quer continuar? [S/N]: ")).upper()[0]
+        if resp in "SN":
+            break
+        print("ERRO! Responda apenas S ou N")
+        if resp == "N":
+            break
+print('-' * 40)
+for k, v in enumerate(time):
+    print(f"{k>3}", end = "")
+    for d in v.values():
+        print(f"{str(d):<15}", end = "")
+        print()
+print('-' * 40)
+
