@@ -434,6 +434,7 @@ Guarde esses resultados em um dicionário.
 No final, coloque esse dicionário em ordem,
 sabendo que o vencedor tirou o maior número no dado
 """
+"""
 from random import randint
 from time import sleep
 from operator import itemgetter
@@ -460,3 +461,60 @@ print(ranking)
 for i,v in enumerate(ranking):
     print(f" {i+1} lugar: {v[0]} com {v[1]}.")
     sleep
+"""
+
+#92
+"""
+Crie um programa que leia nome, ano de nascimento e carteira de trabalho
+e cadastre-os (com idade) em um dicionário. 
+Se por acaso a CTPS for diferente de zero, o dicionário receberá também
+o ano de contratação e o salário.
+Calcule e acrescente, além da idade, com quantos anos
+a pessoa vai se aposentar.
+
+Obs.: aposentadoria em 35 anos de contribuição.
+"""
+from datetime import datetime
+dados = dict()
+dados['nome'] = str(input('Nome: '))
+nasc = int(input("Ano de Nascimento: "))
+dados['idade'] = datetime.now().year - nasc
+dados['ctps'] = int(input("Carteira de Trabalho (0 não tem): "))
+
+
+if dados['ctps'] != 0:
+    dados['contratacao'] = int(input("Ano de contratação: "))
+    dados['salario'] = float(input("Salário R$: "))
+    dados['aposentadoria'] = dados['idade'] + ((dados['contratacao'] + 35) - datetime.now().year)
+
+for k,v in dados.items():
+    print(f" - {k} tem o valor de {v}")
+
+#93
+"""
+Crie um programa que gerencie o aproveitamento de um jogador de futebol.
+O programa vai ler o nome do jogador e quantas partidas ele jogou.
+Depois vai ler a quantidade de gols feitos em cada partida.
+No final, tudo isso será guardado em um dicionário,
+incluindo o total de gols feitos durante o campeonato.
+"""
+
+#94
+"""
+Crie um programa que leia nome, sexo e idade de várias pessoas,
+guardando os dados de cada pessoa em um dicionário
+e todos os dicionários em uma lista.
+
+No final, mostre:
+a. Quantas pessoas foram cadastradas
+b. A média de idade do grupo
+c. uma lista com todas as mulheres
+d. uma lista com todas as pessoas com idade acima da média.
+"""
+
+#95
+"""
+Aprimore o DESAFIO 093 para que ele funcione com vários jogadores,
+incluindo um sistema de visualização de detalhes de aproveitamento 
+de cada jogador.
+"""
