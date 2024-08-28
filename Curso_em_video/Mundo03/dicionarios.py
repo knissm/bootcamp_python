@@ -1,7 +1,7 @@
 tupla = () 
 lista = []
 dicionario = {}
-
+"""
 dados = {'nome': 'pedro'}
 print(dados['nome'])
 
@@ -57,6 +57,22 @@ for e in brasil: #esse for é da lista
     for k, v in e.items():
         print(f"O campo {k} tem valor {v}", end = " ") 
         print()
+"""
+""" 
+Cadastro de Estudantes: Crie um dicionário para armazenar informações de estudantes. 
+As chaves devem ser os nomes dos estudantes, e os valores devem ser as idades. 
+Adicione pelo menos três estudantes ao dicionário e depois imprima as idades deles. 
+"""
+estudantes = []
 
+for i in range(0,3):
+    estudante = {}
+    estudante['nome'] = str(input("Nome do Estudante: "))
+    estudante['idade'] = int(input("Idade do Estudante: "))
+    estudantes.append(estudante.copy())
+    #estudante.clear()
 
+for lista in estudantes:
+    for k, v in lista.items():
+        print(f"{k} : {v}")
 
