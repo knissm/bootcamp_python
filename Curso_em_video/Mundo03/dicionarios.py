@@ -63,6 +63,7 @@ Cadastro de Estudantes: Crie um dicionário para armazenar informações de estu
 As chaves devem ser os nomes dos estudantes, e os valores devem ser as idades. 
 Adicione pelo menos três estudantes ao dicionário e depois imprima as idades deles. 
 """
+"""
 estudantes = []
 
 for i in range(0,3):
@@ -70,9 +71,25 @@ for i in range(0,3):
     estudante['nome'] = str(input("Nome do Estudante: "))
     estudante['idade'] = int(input("Idade do Estudante: "))
     estudantes.append(estudante.copy())
-    #estudante.clear()
+    estudante.clear()
 
 for lista in estudantes:
     for k, v in lista.items():
         print(f"{k} : {v}")
+"""
+"""
+Peça ao usuário para inserir uma palavra e crie um dicionário que armazene a frequência de cada letra na palavra. 
+Imprima o dicionário resultante.
+"""
 
+texto = str(input("Texto: "))
+frequencia = {}
+
+for palavra in texto.lower().split():
+    if palavra in frequencia:
+        frequencia[palavra] = frequencia[palavra] + 1
+    else:
+        frequencia[palavra] = 1
+
+for x, v in frequencia.items():
+    print(f"Palavra ===> {x} : Quantidade de vezes ===> {v}")
