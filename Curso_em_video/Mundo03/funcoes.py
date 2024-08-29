@@ -56,7 +56,7 @@ valores = [7,2,5,0,4]
 dobra(valores)
 print(valores)
 """
-
+"""
 def soma(* valores):
     s = 0
     for num in valores:
@@ -65,3 +65,4 @@ def soma(* valores):
 
 
 soma(2,1,5)
+"""
