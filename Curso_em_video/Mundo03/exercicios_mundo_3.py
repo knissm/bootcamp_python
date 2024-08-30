@@ -586,6 +586,7 @@ Aprimore o DESAFIO 093 para que ele funcione com vários jogadores,
 incluindo um sistema de visualização de detalhes de aproveitamento 
 de cada jogador.
 """
+"""
 time = list()
 jogador = dict()
 partidas = list()
@@ -613,4 +614,128 @@ for k, v in enumerate(time):
         print(f"{str(d):<15}", end = "")
         print()
 print('-' * 40)
+"""
+#96
+#Faça um programa que tenha uma função chamada area(), 
+# que receba dimensões de um terreno retangular (largura e comprimento) e mostre a área do terreno
 
+"""
+def cabecalho(titulo):
+    print('*' * len(titulo))
+    print(titulo)
+    print('*' * len(titulo))
+
+cabecalho("Controle de Terrenos")
+
+def area(largura, comprimento):
+    print(f"A área do terreno de {largura} x {comprimento} é {largura * comprimento}m²")
+
+largura = float(input("Largura: "))
+comprimento = float(input("Comprimento: "))
+
+area(largura,comprimento)
+"""
+
+#97
+#Faça um programa que tenha uma função chamada escreva(), 
+#que receba um texto qualquer como parâmetro 
+#e mostre uma mensagem com tamanho adaptável.
+"""
+Ex:
+escreva("Olá, Mundo!")
+
+Saída:
+
+~~~~~~~~~~~
+Olá, Mundo!
+~~~~~~~~~~~
+"""
+"""
+def escreva(texto):
+    print('~' * len(texto))
+    print(texto)
+    print('~' * len(texto))
+
+escreva("Olá, Mundo!")
+"""
+
+#98
+
+#Faça um programa que tenha uma função chamada contador(), que recebe três parâmetros:
+#início, fim e passo
+#E realize a contagem
+
+#Seu programa tem que realizar três contagens através da função criada
+
+#a) de 1 até 10, de 1 em 1
+#b) de 10 até 0, de 2 em 2
+#c) Uma contagem personalizada
+
+#--> print(f"{valor} ", end="")  # Exemplo de print espaçado
+"""
+from time import sleep
+
+def contador(inicio, fim, passo):
+    if passo < 0:
+        passo *= -1
+    if passo == 0:
+        passo = 1
+
+    print(f"Contagem de {inicio} até {fim} de {passo} em {passo}.")
+
+    if inicio < fim:
+        counter = inicio
+        while counter <= fim:
+            print(f"{counter} ", end="", flush = True)
+            sleep(0.2)
+            counter += passo
+        print("Fim")
+    else:
+        counter = inicio
+        while counter >= fim:
+            print(f"{counter} ", end="", flush=True)
+            sleep(0.2)
+            counter -= passo
+        print("Fim!")
+
+inicio = int(input("Início: \n"))
+fim = int(input("Fim: \n"))
+passo = int(input("Passo: \n"))
+
+contador(1, 10, 1)
+contador(10, 0, 2)
+contador(inicio, fim, passo)
+"""
+
+#99
+#Faça um programa que tenha uma função chamada maior(), que receba vários parâmetros com valores inteiros.
+#Seu programa tem que analisar todos os valores e dizer qual deles é o maior.
+"""
+from time import sleep
+
+def maior(* num):
+    lista = []
+    for i in num:
+        lista.append(i)
+    print('-' * 30)
+    print("Verificando os números inseridos . . .", flush=True)
+    print('-' * 30)
+    sleep(2)
+    print(f"Foram digitados {len(lista)} números.", flush=True)
+    sleep(2)
+    print(f"O maior número foi: {max(lista)}", flush=True)
+    sleep(2)
+    print(f"O menor número foi: {min(lista)}", flush=True)
+    print(f"Os números foram: {lista}")
+    print('-' * 30)
+    print("FIM DA EXECUÇÃO")
+    print('-' * 30)
+
+
+maior(1,2,9,-1,10)
+"""
+
+numeros = (1,2,3,4,5,6,7,8,9,10)
+
+for i in numeros:
+    print(i)
