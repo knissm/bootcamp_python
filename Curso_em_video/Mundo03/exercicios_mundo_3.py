@@ -735,7 +735,31 @@ def maior(* num):
 maior(1,2,9,-1,10)
 """
 
-numeros = (1,2,3,4,5,6,7,8,9,10)
+#100
+#Faça um programa que tenha uma lista chamada numeros e duas funções
+#chamadas sorteio() e somaPar(). A primeira função vai sortear 5 
+#números e vai colocalos dentro de uma lista e a segunda função
+#vai mostrar a soma entre todos os valores PARES sorteados pela função anterior.
+lista = []
 
-for i in numeros:
-    print(i)
+from random import randint
+def sorteio(lst):
+    lista_numeros = []
+    for i in range(0,5):
+        numeros = randint(1,10)
+        lista_numeros.append(numeros)
+
+    return(lista_numeros)
+
+def somaPar(lst):
+    s = 0
+    for i in sorteio(lista):
+        if i % 2 == 0:
+            s += i            
+    print('*' * 15)
+    print('Resultado')
+    print('*' * 15)
+    print(s)
+
+somaPar(sorteio(lista))
+
