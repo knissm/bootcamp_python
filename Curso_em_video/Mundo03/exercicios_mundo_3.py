@@ -740,6 +740,7 @@ maior(1,2,9,-1,10)
 #chamadas sorteio() e somaPar(). A primeira função vai sortear 5 
 #números e vai colocalos dentro de uma lista e a segunda função
 #vai mostrar a soma entre todos os valores PARES sorteados pela função anterior.
+"""
 lista = []
 
 from random import randint
@@ -762,4 +763,33 @@ def somaPar(lst):
     print(s)
 
 somaPar(sorteio(lista))
+"""
 
+#101
+"""
+Crie um programa que tenha uma função chamada voto()
+que vai receber como parâmetro o ano de nascimento de uma pessoa, 
+retornando um valor literal indicando se uma pessoa tem voto 
+NEGADO, OPCIONAL ou OBRIGATORIO nas eleições.
+"""
+
+#104
+"""
+Crie um programa que tenha a função leia_int(), 
+que vai funcionar de forma semelhante à função input do Python,
+só que fazendo a validação para aceitar apenas um valor numérico.
+
+ex.:
+n = leia_int("Digite um n")
+"""
+
+#106
+"""
+Faça um minissistema que utilize o interactive help do Python
+
+O usuário vai digitar o comando e o manual vai aparecer.
+
+Quando o usuário digitar a palavra "FIM", o programa se encerrará!.
+
+OBS: use cores.
+"""
