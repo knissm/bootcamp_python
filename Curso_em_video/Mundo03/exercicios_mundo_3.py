@@ -773,15 +773,23 @@ retornando um valor literal indicando se uma pessoa tem voto
 NEGADO, OPCIONAL ou OBRIGATORIO nas eleições.
 """
 
-#104
 """
-Crie um programa que tenha a função leia_int(), 
-que vai funcionar de forma semelhante à função input do Python,
-só que fazendo a validação para aceitar apenas um valor numérico.
+from datetime import datetime
+ano = datetime.now()
+ano = ano.year
 
-ex.:
-n = leia_int("Digite um n")
+def voto(x):
+    if ano - x <= 18:
+        print("Voto NEGADO. . .", end = " ")
+        print(f'Idade Atual: {ano - x} anos!')
+    if ano - x >= 18 and ano - x <= 60:
+        print("Voto OBRIGATORIO. . . ", end = " ")
+        print(f'Idade Atual: {ano - x} anos!')
+    elif ano - x > 60:
+        print("Voto OPCIONAL . . .", end = " ")
+        print(f'Idade Atual: {ano - x} anos!')
 """
+
 
 #106
 """
@@ -793,3 +801,14 @@ Quando o usuário digitar a palavra "FIM", o programa se encerrará!.
 
 OBS: use cores.
 """
+def ajuda(com):
+    help(com)
+
+comando = ""
+while True:
+    comando = str(input("Função ou Biblioteca: "))
+    if comando.upper() == "FIM":
+        break
+    else:
+        ajuda(comando)
+
