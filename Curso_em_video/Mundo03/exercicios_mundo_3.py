@@ -801,6 +801,7 @@ Quando o usuário digitar a palavra "FIM", o programa se encerrará!.
 
 OBS: use cores.
 """
+"""
 def ajuda(com):
     help(com)
 
@@ -811,4 +812,4 @@ while True:
         break
     else:
         ajuda(comando)
-
+"""
